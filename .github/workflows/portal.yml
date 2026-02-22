@@ -63,7 +63,7 @@ jobs:
         with:
           files: studentPortal-artifact/appsettings.json
         env:
-          SchoolApi.BaseUri: "https://${{ vars.API_NAME }}.azurewebsites.net"
+          SchoolApi.BaseUri: "https://api-tfls-testtoken123.azurewebsites.net"
           ApplicationInsights.ConnectionString: ${{ vars.APP_INSIGHTS_CONN_STRING }}
 
       - name: Azure Login
@@ -77,5 +77,5 @@ jobs:
         id: deploy-api
         uses: azure/webapps-deploy@v2
         with:
-          app-name: ${{ vars.STUDENTPORTAL_NAME }}
+          app-name: "https://app-studentportal-testtoken123.azurewebsites.net"
           package: studentPortal-artifact
