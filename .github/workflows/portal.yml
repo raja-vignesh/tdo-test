@@ -77,5 +77,5 @@ jobs:
         id: deploy-api
         uses: azure/webapps-deploy@v2
         with:
-          app-name: "https://app-studentportal-testtoken123.azurewebsites.net"
+          app-name: "app-studentportal-testtoken123"
           package: studentPortal-artifact
