@@ -114,5 +114,5 @@ jobs:
         id: deploy-api
         uses: azure/webapps-deploy@v2
         with:
-          app-name: 'api-tfls-testtoken123.azurewebsites.net'
+          app-name: 'api-tfls-testtoken123'
           package: api-artifact
