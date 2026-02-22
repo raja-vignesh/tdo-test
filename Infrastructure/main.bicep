@@ -88,7 +88,7 @@ module appServicePlan 'core/host/appServicePlan.bicep' = {
     location: location
     tags: tags
     sku: {
-      name: 'P0v4'
+      name: 'B2'
     }
   }
 }
