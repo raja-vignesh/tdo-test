@@ -39,7 +39,7 @@ jobs:
           template: ./Infrastructure/main.bicep
           deploymentMode: Incremental
           deploymentName: "school-infra-deployment"
-          parameters: Infrastructure/main.parameters.json environmentName=prod sqlAdminPassword=SqlAdmin@12345  appUserPassword=AppUser@12345  resourceToken=TestToken123
+          parameters: Infrastructure/main.parameters.json environmentName=prod sqlAdminPassword=SqlAdmin@12345  appUserPassword=AppUser@12345  resourceToken=testtoken123
           failOnStdErr: false
 
       - name: Display Environment Variables
