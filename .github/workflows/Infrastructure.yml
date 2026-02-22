@@ -25,17 +25,17 @@ jobs:
     - name: Setup Azure CLI
       uses: azure/login@v1
       with:
-        client-id: ${{ secrets.AZURE_CLIENT_ID }}
-        tenant-id: ${{ vars.AZURE_TENANT_ID }}
-        subscription-id: ${{ vars.AZURE_SUBSCRIPTION_ID }}
+        client-id: '883a698a-129b-4587-bcfa-19eee5b6d5a5'
+        tenant-id: 'a7d6f80b-b14f-412b-bdba-38d835993f6e'
+        subscription-id: 'a81f821e-5466-4898-8671-bf41188f39b3'
 
     - name: Deploy Template
       id: deploy-template
       uses: azure/arm-deploy@v1
       with:
         scope: resourcegroup
-        subscriptionId: ${{ vars.AZURE_SUBSCRIPTION_ID }}
-        resourceGroupName: ${{ vars.RESOURCE_GROUP_NAME }}
+        subscriptionId: 'a81f821e-5466-4898-8671-bf41188f39b3'
+        resourceGroupName: 'test'
         template: ./Infrastructure/main.bicep
         deploymentMode: Incremental
         deploymentName: 'school-infra-deployment'
