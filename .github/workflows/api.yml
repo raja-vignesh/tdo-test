@@ -100,14 +100,14 @@ jobs:
       - name: Azure Login
         uses: azure/login@v1
         with:
-          client-id: ${{ secrets.AZURE_CLIENT_ID }}
-          tenant-id: ${{ vars.AZURE_TENANT_ID }}
-          subscription-id: ${{ vars.AZURE_SUBSCRIPTION_ID }}
+          client-id: '883a698a-129b-4587-bcfa-19eee5b6d5a5'
+          tenant-id: 'a7d6f80b-b14f-412b-bdba-38d835993f6e'
+          subscription-id: 'a81f821e-5466-4898-8671-bf41188f39b3'
 
       - name: Deploy Database
         uses: azure/sql-action@v2
         with:
-          connection-string: '${{ vars.DATABASE_CONN_STRING }}password=${{ secrets.APP_USER_PASSWORD }}'
+          connection-string: 'Server=tcp:sql-tfls-testtoken123.database.windows.net,1433;Initial Catalog=sqldb-tfls-testtoken123;Persist Security Info=False;User ID=sqlAdmin;Password={your_password};MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;password=Admin12345678'
           path: db-artifact/migration.sql
 
       - name: Deploy API
